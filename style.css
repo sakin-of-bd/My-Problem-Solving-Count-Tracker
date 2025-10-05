@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background: #ffc0cb; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin: 30px 0 20px 0;
+}
+
+header h1 {
+    font-size: 2.2em;
+    color: #0000ff; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #ff1493; 
+    margin-top: 5px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+
+.card {
+    background: #ffff66; 
+    border-radius: 20px;
+    width: 220px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+
+.card h2 {
+    font-family: Georgia, serif;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    color: #0000ff; 
+}
+
+.card p.username {
+    font-family: Georgia, serif;
+    margin: 5px 0;
+    font-size: 1em;
+    color: #ff0000; 
+}
+
+.card p.solved {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #0782e7; 
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 14px;
+    border-radius: 12px;
+    background-color: rgba(128,0,128,0.2); 
+    color: #800080; 
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card a:hover {
+    background-color: rgba(128,0,128,0.5);
+    transform: scale(1.1);
+}
+
+
+.card.total-card {
+    background: linear-gradient(135deg,#ee8105);
+    color: #fff;
+}
+
+.card.total-card h2,
+.card.total-card p.solved {
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.card.total-card p.solved {
+    font-size: 2.2em;
+}
+
+
+footer {
+    margin: 30px 0 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0.9;
+    color: #00008b; 
+}
+
+footer strong {
+    color: #ff4500; 
+}
+
+@media(max-width: 600px) {
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+    .cards-container {
+        gap: 15px;
+    }
+}
